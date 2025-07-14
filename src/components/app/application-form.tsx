@@ -1,12 +1,13 @@
 'use client';
 
-import { useState, useMemo, useCallback } from 'react';
-import type { Service } from '@/lib/services';
+import { useState, useMemo } from 'react';
+import { services } from '@/lib/services';
 import { serviceSchemaMap } from '@/lib/schemas';
 import { useForm, type FieldValues } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import { useRouter } from 'next/navigation';
+import { notFound } from 'next/navigation';
 
 import { formAssistance } from '@/ai/flows/form-assistance';
 import { useToast } from "@/hooks/use-toast";
@@ -23,7 +24,8 @@ import { cn } from '@/lib/utils';
 import { format } from 'date-fns';
 
 type ApplicationFormProps = {
-  service: Service;
+  serviceId: string;
+  serviceTitle: string;
 };
 
 type AIHelpState = {
@@ -48,11 +50,17 @@ const useDebounce = (callback: (...args: any[]) => void, delay: number) => {
   };
 };
 
-export function ApplicationForm({ service }: ApplicationFormProps) {
+export function ApplicationForm({ serviceId, serviceTitle }: ApplicationFormProps) {
   const [currentStep, setCurrentStep] = useState(0);
   const [aiHelp, setAiHelp] = useState<AIHelpState>({});
   const { toast } = useToast();
   const router = useRouter();
+
+  const service = useMemo(() => services.find(s => s.id === serviceId), [serviceId]);
+
+  if (!service) {
+      notFound();
+  }
 
   const CurrentSchema = useMemo(() => {
     return serviceSchemaMap[service.id as keyof typeof serviceSchemaMap] || z.object({});
@@ -68,8 +76,8 @@ export function ApplicationForm({ service }: ApplicationFormProps) {
   const formFields = useMemo(() => Object.keys(CurrentSchema.shape), [CurrentSchema]);
   
   const steps = useMemo(() => {
-    const fieldGroups = [['fullName', 'dateOfBirth', 'placeOfBirth'], ['address', 'phoneNumber'], ['documentUpload']];
-    return fieldGroups.filter(group => group.some(field => formFields.includes(field)));
+    const fieldGroups = [['fullName', 'dateOfBirth', 'placeOfBirth'], ['address', 'phoneNumber'], ['documentUpload'], ['businessName', 'businessAddress', 'ownerName', 'foodType']];
+    return fieldGroups.map(group => group.filter(field => formFields.includes(field))).filter(group => group.length > 0);
   }, [formFields]);
 
 
@@ -85,7 +93,7 @@ export function ApplicationForm({ service }: ApplicationFormProps) {
         const result = await formAssistance({
             formField: fieldName,
             fieldValue: value,
-            context: `User is applying for ${service.title}.`,
+            context: `User is applying for ${serviceTitle}.`,
         });
         setAiHelp(prev => ({ ...prev, [fieldName]: { text: result.helpText, loading: false } }));
     } catch (error) {

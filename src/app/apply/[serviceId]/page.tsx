@@ -1,6 +1,7 @@
 import { services } from '@/lib/services';
 import { notFound } from 'next/navigation';
 import { ApplicationForm } from '@/components/app/application-form';
+import type { Service } from '@/lib/services';
 
 type ApplyPageProps = {
   params: {
@@ -28,7 +29,7 @@ export default function ApplyPage({ params }: ApplyPageProps) {
           <p className="text-muted-foreground">{service.description}</p>
         </div>
       </div>
-      <ApplicationForm service={service} />
+      <ApplicationForm serviceId={service.id} serviceTitle={service.title} />
     </main>
   );
 }
