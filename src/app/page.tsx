@@ -15,19 +15,19 @@ export default function Home() {
 
   const testimonials = [
     {
-      name: 'Client Name',
+      name: 'Rohan Sharma',
       role: 'Business Owner',
       quote:
         'AM Computers provided excellent service for our GST registration. They made the entire process smooth and hassle-free. Highly recommended!',
     },
     {
-      name: 'Another Client',
+      name: 'Priya Patel',
       role: 'Individual',
       quote:
         'The passport assistance was top-notch. The team is knowledgeable and guided me through every step. I got my passport without any issues.',
     },
     {
-      name: 'Happy Customer',
+      name: 'Vikram Singh',
       role: 'Restaurateur',
       quote:
         "Renewing my food license was a breeze with their help. Professional, efficient, and friendly service. I'll definitely be back for other needs.",
