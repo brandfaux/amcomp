@@ -126,7 +126,7 @@ export default function Home() {
             </div>
             <div className="text-center">
               <Button variant="ghost" asChild>
-                <Link href="/my-applications" className="flex items-center">
+                <Link href="/services" className="flex items-center">
                   View All Services <span className="ml-2">→</span>
                 </Link>
               </Button>
@@ -136,7 +136,7 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section className="py-12 md:py-24 bg-secondary/50">
+      <section id="about" className="py-12 md:py-24 bg-secondary/50">
         <div className="container px-4 md:px-6">
           <div className="grid items-center gap-12 lg:grid-cols-2">
             <div className="space-y-4">
