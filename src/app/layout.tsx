@@ -4,7 +4,7 @@ import { SiteHeader } from '@/components/app/site-header';
 import { Toaster } from "@/components/ui/toaster";
 
 export const metadata: Metadata = {
-  title: 'AM Services Hub',
+  title: 'AM Computers',
   description: 'Online services by AM Computers',
 };
 

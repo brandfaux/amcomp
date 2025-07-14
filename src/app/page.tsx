@@ -72,7 +72,7 @@ export default function Home() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {stats.map((stat, index) => (
               <div key={index} className="text-center p-4">
-                <h3 className="text-3xl font-bold text-primary">{stat.value}</h3>
+                <h3 className="text-3xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">{stat.value}</h3>
                 <p className="text-muted-foreground">{stat.label}</p>
               </div>
             ))}
@@ -88,7 +88,7 @@ export default function Home() {
               <span className="inline-block px-3 py-1 text-sm font-medium rounded-full border border-border text-muted-foreground">
                 Our Offerings
               </span>
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Featured Services</h2>
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Featured Services</h2>
               <p className="max-w-[700px] mx-auto text-muted-foreground">
                 Comprehensive solutions tailored for your documentation and technology needs.
               </p>
@@ -143,7 +143,7 @@ export default function Home() {
               <span className="inline-block px-3 py-1 text-sm font-medium rounded-full border border-border text-muted-foreground">
                 Our Story
               </span>
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">About AM Services Hub</h2>
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">About AM Computers</h2>
               <p className="text-muted-foreground">
                 Established in 2013, AM Computers has been serving the Jamkhed community with reliable and professional
                 services for all documentation and technology needs. Our experienced team ensures smooth processing
@@ -185,7 +185,7 @@ export default function Home() {
               <span className="inline-block px-3 py-1 text-sm font-medium rounded-full border border-border text-muted-foreground">
                 Client Feedback
               </span>
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">What Our Clients Say</h2>
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">What Our Clients Say</h2>
               <p className="max-w-[700px] mx-auto text-muted-foreground">
                 Hear from businesses and individuals who have used our services.
               </p>
@@ -225,7 +225,7 @@ export default function Home() {
         <div className="container px-4 md:px-6 relative z-10">
           <div className="flex flex-col items-center space-y-6 text-center">
             <div className="space-y-4">
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Ready to get started?</h2>
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Ready to get started?</h2>
               <p className="max-w-[700px] text-muted-foreground">
                 Contact us today for professional assistance with all your documentation and technology needs.
               </p>

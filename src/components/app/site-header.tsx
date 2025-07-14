@@ -41,7 +41,7 @@ export function SiteHeader() {
             <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary">
               <span className="font-bold text-primary-foreground">AM</span>
             </div>
-            <span className="font-bold sm:inline-block">AM Services Hub</span>
+            <span className="font-bold sm:inline-block">AM Computers</span>
           </Link>
           <nav className="flex items-center gap-1 text-sm">
             <Button variant="ghost" asChild>
@@ -137,7 +137,7 @@ export function SiteHeader() {
                 <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary">
                 <span className="font-bold text-primary-foreground">AM</span>
                 </div>
-                <span className="font-bold sm:inline-block">AM Services Hub</span>
+                <span className="font-bold sm:inline-block">AM Computers</span>
             </Link>
         </div>
 
