@@ -4,7 +4,7 @@ const fileSchema = z.custom<File>(val => val instanceof File, "Please upload a f
 
 export const passportApplicationSchema = z.object({
   fullName: z.string().min(3, { message: 'Full name must be at least 3 characters.' }),
-  dateOfBirth: z.string().refine((val) => !isNaN(Date.parse(val)), { message: "Invalid date format." }),
+  dateOfBirth: z.string().refine((val) => val && !isNaN(Date.parse(val)), { message: "A valid date of birth is required." }),
   placeOfBirth: z.string().min(2, { message: 'Place of birth is required.' }),
   address: z.string().min(10, { message: 'Address must be at least 10 characters.' }),
   phoneNumber: z.string().regex(/^\d{10}$/, { message: 'Please enter a valid 10-digit phone number.'}),

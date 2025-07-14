@@ -76,9 +76,15 @@ export function ApplicationForm({ serviceId, serviceTitle }: ApplicationFormProp
   const formFields = useMemo(() => Object.keys(CurrentSchema.shape), [CurrentSchema]);
   
   const steps = useMemo(() => {
-    const fieldGroups = [['fullName', 'dateOfBirth', 'placeOfBirth'], ['address', 'phoneNumber'], ['documentUpload'], ['businessName', 'businessAddress', 'ownerName', 'foodType']];
-    return fieldGroups.map(group => group.filter(field => formFields.includes(field))).filter(group => group.length > 0);
-  }, [formFields]);
+    // Dynamically create steps based on schema fields for better maintainability.
+    const allFields = Object.keys(CurrentSchema.shape);
+    const groupSize = 3; // For example, group fields into steps of 3
+    const fieldGroups = [];
+    for (let i = 0; i < allFields.length; i += groupSize) {
+        fieldGroups.push(allFields.slice(i, i + groupSize));
+    }
+    return fieldGroups.filter(group => group.length > 0);
+  }, [CurrentSchema]);
 
 
   const getAIHelp = useDebounce(async (fieldName: string, value: string) => {
@@ -108,7 +114,7 @@ export function ApplicationForm({ serviceId, serviceTitle }: ApplicationFormProp
       title: "Application Submitted!",
       description: "Your application has been successfully submitted.",
     });
-    router.push('/my-applications');
+    router.push('/services'); // Redirect to services page after submission
   };
 
   const nextStep = async () => {
