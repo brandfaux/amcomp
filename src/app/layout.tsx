@@ -14,7 +14,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning className="scroll-smooth">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
@@ -29,6 +29,7 @@ export default function RootLayout({
           <main className="flex-1">
             {children}
           </main>
+          {/* You can add a footer here if you like */}
         </div>
         <Toaster />
       </body>

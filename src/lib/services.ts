@@ -7,6 +7,7 @@ export type Service = {
   icon: LucideIcon;
   imageUrl: string;
   imageHint: string;
+  category: string;
 };
 
 export const services: Service[] = [
@@ -17,6 +18,7 @@ export const services: Service[] = [
     icon: BookUser,
     imageUrl: 'https://images.unsplash.com/photo-1559269555-54483a3f5a02?q=80&w=600&h=400&auto=format&fit=crop',
     imageHint: 'passport travel',
+    category: 'Government',
   },
   {
     id: 'food-licensing',
@@ -25,6 +27,7 @@ export const services: Service[] = [
     icon: ChefHat,
     imageUrl: 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=600&h=400&auto=format&fit=crop',
     imageHint: 'food restaurant',
+    category: 'Government',
   },
   {
     id: 'business-registration',
@@ -33,6 +36,7 @@ export const services: Service[] = [
     icon: Building,
     imageUrl: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=600&h=400&auto=format&fit=crop',
     imageHint: 'business office',
+    category: 'Business',
   },
   {
     id: 'driving-license',
@@ -41,6 +45,7 @@ export const services: Service[] = [
     icon: Car,
     imageUrl: 'https://images.unsplash.com/photo-1574643534299-76a11a7b830c?q=80&w=600&h=400&auto=format&fit=crop',
     imageHint: 'car driving',
+    category: 'Government',
   },
 ];
 
