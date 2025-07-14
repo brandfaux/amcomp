@@ -1,9 +1,10 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { services } from '@/lib/services';
+import { blogPosts } from '@/lib/blog';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Check, Star, User } from 'lucide-react';
+import { Check, Star, User, ArrowRight } from 'lucide-react';
 
 export default function Home() {
   const stats = [
@@ -135,8 +136,62 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Blog Section */}
+      <section id="blog" className="py-12 md:py-24 bg-secondary/50">
+        <div className="container px-4 sm:px-6">
+          <div className="space-y-6">
+            <div className="space-y-2 text-center">
+              <span className="inline-block px-3 py-1 text-sm font-medium rounded-full border border-border text-muted-foreground">
+                From Our Blog
+              </span>
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">News & Resources</h2>
+              <p className="max-w-[700px] mx-auto text-muted-foreground">
+                Stay updated with the latest information and guides from our experts.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {blogPosts.slice(0, 3).map((post) => (
+                <Link href={`/blog/${post.slug}`} key={post.slug} className="group">
+                  <Card className="flex h-full flex-col overflow-hidden transition-all duration-300 ease-in-out group-hover:-translate-y-1 group-hover:shadow-xl">
+                    <div className="relative h-48 w-full">
+                      <Image
+                        src={post.imageUrl}
+                        alt={post.title}
+                        fill
+                        className="object-cover"
+                        data-ai-hint={post.imageHint}
+                      />
+                    </div>
+                    <CardHeader>
+                      <CardTitle>{post.title}</CardTitle>
+                      <p className="text-sm text-muted-foreground">
+                        {new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+                      </p>
+                    </CardHeader>
+                    <CardContent className="flex-grow">
+                      <p className="text-muted-foreground">{post.excerpt}</p>
+                    </CardContent>
+                    <div className="p-6 pt-0 flex items-center text-sm font-medium text-primary opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                      <span>Read More</span>
+                      <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+                    </div>
+                  </Card>
+                </Link>
+              ))}
+            </div>
+            <div className="text-center">
+              <Button variant="ghost" asChild>
+                <Link href="/blog" className="flex items-center">
+                  View All Posts <span className="ml-2">→</span>
+                </Link>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* About Section */}
-      <section id="about" className="py-12 md:py-24 bg-secondary/50">
+      <section id="about" className="py-12 md:py-24 bg-background">
         <div className="container px-4 md:px-6">
           <div className="grid items-center gap-12 lg:grid-cols-2">
             <div className="space-y-4">
@@ -178,7 +233,7 @@ export default function Home() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-12 md:py-24 bg-background">
+      <section className="py-12 md:py-24 bg-secondary/50">
         <div className="container px-4 md:px-6">
           <div className="space-y-6">
             <div className="space-y-2 text-center">

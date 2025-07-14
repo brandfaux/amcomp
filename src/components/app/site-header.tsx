@@ -33,6 +33,14 @@ export function SiteHeader() {
     }, {} as Record<string, typeof services>);
   }, []);
 
+  const navLinks = [
+      { href: '/', label: 'Home' },
+      { href: '/services', label: 'Services', isDropdown: true },
+      { href: '/blog', label: 'Blog' },
+      { href: '/#about', label: 'About' },
+      { href: '/#contact', label: 'Contact' },
+  ]
+
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center">
@@ -43,7 +51,7 @@ export function SiteHeader() {
             <span className="font-bold sm:inline-block">AM Computers</span>
           </Link>
           <nav className="flex items-center gap-1 text-sm">
-            <Button variant="ghost" asChild>
+             <Button variant="ghost" asChild>
                 <Link
                 href="/"
                 className={cn(
@@ -82,6 +90,17 @@ export function SiteHeader() {
             </DropdownMenu>
             <Button variant="ghost" asChild>
                 <Link
+                href="/blog"
+                className={cn(
+                  "transition-colors hover:text-foreground/80",
+                  pathname === "/blog" ? "text-foreground font-semibold" : "text-foreground/60"
+                )}
+                >
+                Blog
+                </Link>
+            </Button>
+            <Button variant="ghost" asChild>
+                <Link
                     href="/#about"
                     className="text-foreground/60 transition-colors hover:text-foreground/80"
                 >
@@ -113,6 +132,9 @@ export function SiteHeader() {
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
                     <Link href="/services">Services</Link>
+                </DropdownMenuItem>
+                 <DropdownMenuItem asChild>
+                    <Link href="/blog">Blog</Link>
                 </DropdownMenuItem>
                 <DropdownMenuSeparator />
                 {Object.entries(serviceGroups).flatMap(([category, services]) => [
