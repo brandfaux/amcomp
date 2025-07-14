@@ -44,8 +44,8 @@ export default function Home() {
         </div>
         <div className="container px-4 sm:px-6 relative z-10">
           <div className="flex flex-col items-center space-y-6 text-center">
-            <span className="inline-block px-3 py-1 text-sm font-medium rounded-full bg-secondary text-secondary-foreground mb-2">
-              Trusted Since 2013
+            <span className="inline-block rounded-full border border-primary/30 bg-secondary px-4 py-1.5 text-sm font-medium tracking-wider text-primary-foreground/80 mb-2 shadow-sm">
+              A Decade of Excellence
             </span>
             <div className="space-y-4">
               <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
