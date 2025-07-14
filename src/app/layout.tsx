@@ -50,20 +50,20 @@ export default function RootLayout({
             <SidebarContent>
               <SidebarMenu>
                 <SidebarMenuItem>
-                  <Link href="/" legacyBehavior passHref>
-                    <SidebarMenuButton tooltip="Home">
+                  <SidebarMenuButton asChild tooltip="Home">
+                    <Link href="/">
                       <Home />
                       <span>Home</span>
-                    </SidebarMenuButton>
-                  </Link>
+                    </Link>
+                  </SidebarMenuButton>
                 </SidebarMenuItem>
                 <SidebarMenuItem>
-                  <Link href="/my-applications" legacyBehavior passHref>
-                    <SidebarMenuButton tooltip="My Applications">
+                  <SidebarMenuButton asChild tooltip="My Applications">
+                    <Link href="/my-applications">
                       <FileText />
                       <span>My Applications</span>
-                    </SidebarMenuButton>
-                  </Link>
+                    </Link>
+                  </SidebarMenuButton>
                 </SidebarMenuItem>
               </SidebarMenu>
             </SidebarContent>
