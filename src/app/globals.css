@@ -20,7 +20,7 @@ body {
     --secondary-foreground: 210 40% 98%; /* hsl(210, 40%, 98%) */
     --muted: 222 9% 23%; /* hsl(222, 9%, 23%) */
     --muted-foreground: 215 20% 65%; /* hsl(215, 20%, 65%) */
-    --accent: 333 88% 66%; /* hsl(333, 88%, 66%) - Pink */
+    --accent: 0 84% 60%; /* hsl(0, 84%, 60%) - Red */
     --accent-foreground: 210 40% 98%; /* hsl(210, 40%, 98%) */
     --destructive: 0 63% 31%; /* hsl(0, 63%, 31%) */
     --destructive-foreground: 210 40% 98%; /* hsl(210, 40%, 98%) */
@@ -55,7 +55,7 @@ body {
     --secondary-foreground: 210 40% 98%; /* hsl(210, 40%, 98%) */
     --muted: 222 9% 23%; /* hsl(222, 9%, 23%) */
     --muted-foreground: 215 20% 65%; /* hsl(215, 20%, 65%) */
-    --accent: 333 88% 66%; /* hsl(333, 88%, 66%) */
+    --accent: 0 84% 60%; /* hsl(0, 84%, 60%) - Red */
     --accent-foreground: 210 40% 98%; /* hsl(210, 40%, 98%) */
     --destructive: 0 63% 31%; /* hsl(0, 63%, 31%) */
     --destructive-foreground: 210 40% 98%; /* hsl(210, 40%, 98%) */
