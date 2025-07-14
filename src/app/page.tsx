@@ -94,7 +94,7 @@ export default function Home() {
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {services.slice(0, 3).map((service) => (
+              {services.slice(0, 6).map((service) => (
                 <Card key={service.id} className="flex flex-col group hover:border-primary transition-colors">
                   <div className="relative h-48 w-full">
                     <Image

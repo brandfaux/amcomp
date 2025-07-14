@@ -19,13 +19,64 @@ export const foodLicensingSchema = z.object({
     documentUpload: fileSchema.refine(file => file.size < 5000000, "Max file size is 5MB.").optional(),
 });
 
+export const shopActLicenseSchema = z.object({
+    shopName: z.string().min(3, { message: 'Shop name must be at least 3 characters.' }),
+    shopAddress: z.string().min(10, { message: 'Shop address is required.' }),
+    ownerName: z.string().min(3, { message: 'Owner name is required.' }),
+    businessType: z.string().min(3, { message: 'Type of business is required.' }),
+    documentUpload: fileSchema.refine(file => file.size < 5000000, "Max file size is 5MB.").optional(),
+});
+
 // Add other schemas as needed
 export const businessRegistrationSchema = z.object({});
 export const drivingLicenseSchema = z.object({});
+export const itrFilingSchema = z.object({});
+export const loanProjectReportSchema = z.object({});
+export const udyamAadhaarSchema = z.object({});
+export const panCardSchema = z.object({});
+export const votingCardSchema = z.object({});
+export const gstRegistrationSchema = z.object({});
+export const hsrpNumberPlateSchema = z.object({});
+export const examFormsSchema = z.object({});
+export const aadhaarAddressUpdateSchema = z.object({});
+export const annualMaintenanceContractSchema = z.object({});
+export const networkSetupSchema = z.object({});
+export const securityAuditsSchema = z.object({});
+export const osSupportSchema = z.object({});
+export const billingSoftwareSchema = z.object({});
+export const invoiceSoftwareSchema = z.object({});
+export const stampMakingSchema = z.object({});
+export const logoDesignSchema = z.object({});
+export const brandingSchema = z.object({});
+export const photoEditingSchema = z.object({});
+export const pvcCardPrintingSchema = z.object({});
+
+
 
 export const serviceSchemaMap = {
     'passport-assistance': passportApplicationSchema,
     'food-licensing': foodLicensingSchema,
+    'shop-act-license': shopActLicenseSchema,
+    'itr-filing': itrFilingSchema,
+    'loan-project-report': loanProjectReportSchema,
+    'udyam-aadhaar': udyamAadhaarSchema,
+    'pan-card': panCardSchema,
+    'voting-card': votingCardSchema,
+    'gst-registration': gstRegistrationSchema,
+    'hsrp-number-plate': hsrpNumberPlateSchema,
+    'exam-forms': examFormsSchema,
+    'aadhaar-address-update': aadhaarAddressUpdateSchema,
     'business-registration': businessRegistrationSchema,
     'driving-license': drivingLicenseSchema,
+    'annual-maintenance-contract': annualMaintenanceContractSchema,
+    'network-setup': networkSetupSchema,
+    'security-audits': securityAuditsSchema,
+    'os-support': osSupportSchema,
+    'billing-software': billingSoftwareSchema,
+    'invoice-software': invoiceSoftwareSchema,
+    'stamp-making': stampMakingSchema,
+    'logo-design': logoDesignSchema,
+    'branding': brandingSchema,
+    'photo-editing': photoEditingSchema,
+    'pvc-card-printing': pvcCardPrintingSchema,
 }
