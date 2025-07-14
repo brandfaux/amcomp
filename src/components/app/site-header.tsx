@@ -3,6 +3,7 @@
 
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import {
@@ -38,9 +39,7 @@ export function SiteHeader() {
         {/* Desktop Menu */}
         <div className="mr-4 hidden md:flex">
           <Link href="/" className="mr-6 flex items-center space-x-2">
-            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary">
-              <span className="font-bold text-primary-foreground">AM</span>
-            </div>
+            <Image src="/logo.png" alt="AM Computers Logo" width={40} height={40} className="rounded-full" />
             <span className="font-bold sm:inline-block">AM Computers</span>
           </Link>
           <nav className="flex items-center gap-1 text-sm">
@@ -134,9 +133,7 @@ export function SiteHeader() {
                 </DropdownMenuContent>
             </DropdownMenu>
              <Link href="/" className="ml-4 flex items-center space-x-2">
-                <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary">
-                <span className="font-bold text-primary-foreground">AM</span>
-                </div>
+                <Image src="/logo.png" alt="AM Computers Logo" width={32} height={32} className="rounded-full" />
                 <span className="font-bold sm:inline-block">AM Computers</span>
             </Link>
         </div>
