@@ -11,7 +11,7 @@ export function ServiceCard({ service }: ServiceCardProps) {
   const Icon = service.icon;
 
   return (
-    <Card className="flex h-full flex-col transform-gpu transition-all duration-300 ease-in-out group-hover:-translate-y-1 group-hover:shadow-xl overflow-hidden">
+    <Card className="flex h-full flex-col transform-gpu transition-all duration-300 ease-in-out group-hover:-translate-y-1 group-hover:shadow-xl group-hover:shadow-primary/10 overflow-hidden">
       <div className="relative h-40 w-full">
         <Image
           src={service.imageUrl}

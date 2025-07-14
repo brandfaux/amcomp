@@ -96,7 +96,7 @@ export default function Home() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {services.slice(0, 6).map((service) => (
-                <Card key={service.id} className="flex flex-col group hover:border-primary transition-colors">
+                <Card key={service.id} className="flex flex-col group hover:border-primary transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/10">
                   <div className="relative h-48 w-full">
                     <Image
                       src={service.imageUrl}
@@ -118,7 +118,7 @@ export default function Home() {
                   <div className="p-6 pt-0">
                     <Button variant="outline" asChild className="w-full mt-4">
                       <Link href={`/apply/${service.id}`}>
-                        Apply Now <span className="ml-2">→</span>
+                        Apply Now <span className="ml-2 transition-transform duration-300 group-hover:translate-x-1">→</span>
                       </Link>
                     </Button>
                   </div>
@@ -127,8 +127,8 @@ export default function Home() {
             </div>
             <div className="text-center">
               <Button variant="ghost" asChild>
-                <Link href="/services" className="flex items-center">
-                  View All Services <span className="ml-2">→</span>
+                <Link href="/services" className="flex items-center group">
+                  View All Services <span className="ml-2 transition-transform duration-300 group-hover:translate-x-1">→</span>
                 </Link>
               </Button>
             </div>
@@ -152,7 +152,7 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {blogPosts.slice(0, 3).map((post) => (
                 <Link href={`/blog/${post.slug}`} key={post.slug} className="group">
-                  <Card className="flex h-full flex-col overflow-hidden transition-all duration-300 ease-in-out group-hover:-translate-y-1 group-hover:shadow-xl">
+                  <Card className="flex h-full flex-col overflow-hidden transition-all duration-300 ease-in-out group-hover:-translate-y-1 group-hover:shadow-xl group-hover:shadow-primary/10">
                     <div className="relative h-48 w-full">
                       <Image
                         src={post.imageUrl}
@@ -181,8 +181,8 @@ export default function Home() {
             </div>
             <div className="text-center">
               <Button variant="ghost" asChild>
-                <Link href="/blog" className="flex items-center">
-                  View All Posts <span className="ml-2">→</span>
+                <Link href="/blog" className="flex items-center group">
+                  View All Posts <span className="ml-2 transition-transform duration-300 group-hover:translate-x-1">→</span>
                 </Link>
               </Button>
             </div>
@@ -224,7 +224,7 @@ export default function Home() {
               </ul>
             </div>
             <div className="flex justify-center">
-              <div className="relative aspect-video w-full max-w-lg rounded-lg overflow-hidden shadow-lg">
+              <div className="relative aspect-video w-full max-w-lg rounded-lg overflow-hidden shadow-lg transition-all duration-300 ease-in-out hover:shadow-primary/20 hover:-translate-y-1">
                 <Image src="https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?q=80&w=600&h=400&auto=format&fit=crop" alt="Office" layout="fill" objectFit="cover" data-ai-hint="office team" />
               </div>
             </div>
@@ -247,7 +247,7 @@ export default function Home() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {testimonials.map((testimonial, index) => (
-                <Card key={index} className="p-6">
+                <Card key={index} className="p-6 transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/10">
                   <div className="flex items-center gap-4 mb-4">
                     <div className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center">
                       <User className="text-primary h-5 w-5" />
