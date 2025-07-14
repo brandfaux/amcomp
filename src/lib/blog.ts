@@ -20,7 +20,7 @@ export const blogPosts: BlogPost[] = [
     title: 'A Comprehensive Guide to Documents Required for a New Indian Passport',
     date: '2024-07-28',
     excerpt: 'Applying for a new passport? Our detailed guide covers all the essential documents you need to ensure a smooth and successful application process.',
-    imageUrl: 'https://images.unsplash.com/photo-1590674902824-c15d547c16c6?q=80&w=600&h=400&auto=format&fit=crop',
+    imageUrl: 'https://images.unsplash.com/photo-1454496406107-dc34337da8d6?q=80&w=1600&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     imageHint: 'passport travel documents',
     author: {
       name: 'AM Computers Staff',
@@ -65,7 +65,7 @@ export const blogPosts: BlogPost[] = [
     title: 'GST Registration Essentials for Small Businesses',
     date: '2024-07-25',
     excerpt: 'Starting a new business? Understand the basics of GST registration and why it’s crucial for your company’s growth and legal compliance.',
-    imageUrl: 'https://images.unsplash.com/photo-1599658880122-a633fb9b9560?q=80&w=600&h=400&auto=format&fit=crop',
+    imageUrl: 'https://images.unsplash.com/photo-1534951009808-766178b47a4f?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     imageHint: 'business tax',
     author: {
       name: 'AM Computers Staff',
@@ -102,7 +102,7 @@ export const blogPosts: BlogPost[] = [
     title: 'Why Your Food Business Needs an FSSAI License',
     date: '2024-07-22',
     excerpt: 'Learn about the different types of FSSAI food licenses and the essential documents you need to operate your food business legally in India.',
-    imageUrl: 'https://images.unsplash.com/photo-1565299624946-b28f40a0fa3e?q=80&w=600&h=400&auto=format&fit=crop',
+    imageUrl: 'https://images.unsplash.com/photo-1656010041981-9d3ab571a6f9?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     imageHint: 'food preparation',
     author: {
       name: 'AM Computers Staff',
