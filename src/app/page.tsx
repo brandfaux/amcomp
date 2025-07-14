@@ -4,7 +4,7 @@ import { ServiceCard } from '@/components/app/service-card';
 
 export default function Home() {
   return (
-    <main className="flex-1 p-4 md:p-8">
+    <main className="container mx-auto flex-1 p-4 md:p-8">
       <div className="mb-8">
         <h1 className="text-3xl font-bold tracking-tight">Our Services</h1>
         <p className="text-muted-foreground">

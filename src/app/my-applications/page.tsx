@@ -3,7 +3,7 @@ import { mockApplications } from '@/lib/services';
 
 export default function MyApplicationsPage() {
   return (
-    <main className="flex-1 p-4 md:p-8">
+    <main className="container mx-auto flex-1 p-4 md:p-8">
       <div className="mb-8">
         <h1 className="text-3xl font-bold tracking-tight">My Applications</h1>
         <p className="text-muted-foreground">

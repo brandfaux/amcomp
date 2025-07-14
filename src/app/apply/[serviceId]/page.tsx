@@ -19,7 +19,7 @@ export default function ApplyPage({ params }: ApplyPageProps) {
   const Icon = service.icon;
 
   return (
-    <main className="flex-1 p-4 md:p-8">
+    <main className="container mx-auto flex-1 p-4 md:p-8">
       <div className="mb-8 flex items-center gap-4">
         <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
           <Icon className="h-7 w-7" />
