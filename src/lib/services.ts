@@ -5,6 +5,8 @@ export type Service = {
   title: string;
   description: string;
   icon: LucideIcon;
+  imageUrl: string;
+  imageHint: string;
 };
 
 export const services: Service[] = [
@@ -13,24 +15,32 @@ export const services: Service[] = [
     title: 'Passport Assistance',
     description: 'Guided assistance for new passport applications and renewals.',
     icon: BookUser,
+    imageUrl: 'https://placehold.co/600x400.png',
+    imageHint: 'passport travel',
   },
   {
     id: 'food-licensing',
     title: 'Food Licensing',
     description: 'Apply for or renew your FSSAI food license for your business.',
     icon: ChefHat,
+    imageUrl: 'https://placehold.co/600x400.png',
+    imageHint: 'food restaurant',
   },
   {
     id: 'business-registration',
     title: 'Business Registration',
     description: 'Register your new company, LLP, or partnership firm with ease.',
     icon: Building,
+    imageUrl: 'https://placehold.co/600x400.png',
+    imageHint: 'business office',
   },
   {
     id: 'driving-license',
     title: 'Driving License',
     description: 'Assistance with new learner\'s and permanent driving license applications.',
     icon: Car,
+    imageUrl: 'https://placehold.co/600x400.png',
+    imageHint: 'car driving',
   },
 ];
 
